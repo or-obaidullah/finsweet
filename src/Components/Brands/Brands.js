@@ -11,6 +11,7 @@ const Brands = () => {
             <div className='font-[600] text-[24px] leading-[36px] text-[#14142B]'>Podcast Available On</div>
 
             {
+                brandLogo &&
                 brandLogo.map(logo => <a href=""><img className='w-[80%]' src={logo} alt="" /></a>)
             }
         </div>
