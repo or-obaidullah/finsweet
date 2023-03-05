@@ -1,10 +1,32 @@
 import React from 'react';
-import { SiApplepodcasts, SiSpotify, SiGooglepodcasts, SiSoundcloud } from 'react-icons/si';
 import logo from '../../image/Logo.svg';
+import appleIcon from '../../image/appleIcon_Si.svg'
+import googleIcon from '../../image/Google_Si.svg'
+import cloudIcon from '../../image/Cloud_Si.svg'
+import spotifyIcon from '../../image/Spotify_Si.svg'
 
 const BottomContent = () => {
+    // const logos = [appleIcon, googleIcon, cloudIcon, spotifyIcon]
+    const datas = [
+        {
+            name: 'Apple Podcasts',
+            logo: appleIcon
+        },
+        {
+            name: 'Google Podcasts',
+            logo: googleIcon
+        },
+        {
+            name: 'SoundCLOUD',
+            logo: cloudIcon
+        },
+        {
+            name: 'Spotify',
+            logo: spotifyIcon
+        }
+    ]
     return (
-        <div className='container mx-auto'>
+        <div className='max-w-[1280px] mx-auto'>
             <div className='flex justify-between '>
                 <div className='text-[#fff] mt-[150px]'>
                     <a href=""><img className='w-[60%]' src={logo} alt="" /></a>
@@ -24,22 +46,17 @@ const BottomContent = () => {
                 <div className='text-[#fff] flex flex-col mt-[150px]'>
                     <h6 className='text-[20px] mb-5 font-bold'>Subscribe</h6>
 
-                    <div className='flex items-center'>
-                        <div className='text-[#9C33CF] mr-1'><SiApplepodcasts /></div>
-                        <div>Apple Podcasts</div>
-                    </div>
-                    <div className='flex items-center mt-6'>
-                        <div className='text-[#FFF] mr-1 w-5 h-5 flex items-center justify-center rounded-[50%] bg-[#FF4702]'><SiSoundcloud /></div>
-                        <div>Apple Podcasts</div>
-                    </div>
-                    <div className='flex items-center mt-6'>
-                        <div className='text-[#9C33CF] mr-1'><SiGooglepodcasts /></div>
-                        <div>Apple Podcasts</div>
-                    </div>
-                    <div className='flex items-center mt-6'>
-                        <div className='text-[#1AD993] mr-1'><SiSpotify /></div>
-                        <div>Apple Podcasts</div>
-                    </div>
+                    {
+                        datas.map(data =>
+                            <div className='flex items-center mt-6'>
+                                <img className='max-w-[13%]'  src={data.logo} alt="" />
+                                <div className='ml-2'>{data.name}</div>
+                            </div>
+                        )
+                    }
+
+
+
                 </div>
             </div>
         </div>

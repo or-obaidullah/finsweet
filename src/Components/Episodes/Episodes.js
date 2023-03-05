@@ -31,7 +31,7 @@ const Episodes = () => {
                     atmosphere, for the sky was a dead black.</p>
                 <button className='bg-[#503AE7] text-white w-[154px] p-2 text-[16px]'>See All Episodes</button>
             </div>
-            <div className=' my-10 grid grid-cols-3 gap-3'>
+            <div className=' my-10 grid grid-cols-3 content-between gap-6'>
                 <Card mic={true} img={epiData[0].img} heading={epiData[0].heading} ></Card>
                 <Card mic={true} img={epiData[1].img} heading={epiData[1].heading} ></Card>
                 <Card mic={true} img={epiData[2].img} heading={epiData[2].heading} ></Card>

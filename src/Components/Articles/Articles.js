@@ -17,7 +17,7 @@ const Articles = () => {
         },
     ]
     return (
-        <div className='my-10 grid grid-cols-3 gap-3 container mx-auto mb-[205px]'>
+        <div className='container my-10 grid grid-cols-3 gap-3 mx-auto mb-[205px]'>
             <ArticleCard></ArticleCard>
             <Card read={true} img={articleData[0].img} heading={articleData[0].heading}></Card>
             <Card read={true} img={articleData[1].img} heading={articleData[1].heading}></Card>

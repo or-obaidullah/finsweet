@@ -4,7 +4,7 @@ import TopContent from './TopContent';
 
 const Footer = () => {
     return (
-        <div className='mx-auto  bg-[#14142B]  h-[574px] mt-[150px] relative'>
+        <div className='max-w-[1440px] mx-auto  bg-[#14142B]  h-[574px] mt-[150px] relative'>
             <TopContent></TopContent>
             <BottomContent></BottomContent>
             <div className='flex items-center justify-center bg-[#503AE7] text-[#fff] h-[64px] mt-[150px]'>
